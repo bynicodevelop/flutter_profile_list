@@ -1,7 +1,7 @@
 name: flutter_profile_list
 description: A new flutter plugin project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/bynicodevelop/flutter_profile_list
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
