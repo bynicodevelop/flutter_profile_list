@@ -30,10 +30,12 @@ class _MyAppState extends State<MyApp> {
           uid: _faker.randomGenerator.string(10),
           username: _faker.person.name(),
           status: randInt % 3 != 0 ? _faker.lorem.sentences(2).join(' ') : '',
-          avatarURL: _faker.image.image(width: 200, height: 200, keywords: [
-            'person',
-            DateTime.now().toString(),
-          ]),
+          avatarURL: randInt % 3 != 0
+              ? _faker.image.image(width: 200, height: 200, keywords: [
+                  'person',
+                  DateTime.now().toString(),
+                ])
+              : null,
         ),
       );
     }
