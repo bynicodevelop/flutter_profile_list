@@ -11,7 +11,7 @@ class ItemProfileModel {
   final String status;
   final String avatarURL;
 
-  ItemProfileModel({
+  const ItemProfileModel({
     @required this.uid,
     @required this.username,
     this.status,
