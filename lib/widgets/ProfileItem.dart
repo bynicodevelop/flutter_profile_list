@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_profile_avatar/flutter_profile_avatar.dart';
 import 'package:flutter_profile_list/models/Profile.dart';
 
 class ProfileItem extends StatelessWidget {
@@ -23,9 +24,9 @@ class ProfileItem extends StatelessWidget {
           children: [
             Hero(
               tag: profile.uid,
-              child: CircleAvatar(
-                backgroundColor: Theme.of(context).primaryColor,
-                backgroundImage: NetworkImage(profile.avatarURL),
+              child: ProfileAvatar(
+                username: profile.username,
+                avatarURL: profile.avatarURL,
               ),
             ),
             SizedBox(
