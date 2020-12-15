@@ -1,3 +1,9 @@
+## 0.0.2
+
+- Updated the example main file
+- Added the plugin ProfileAvatar
+- Updated gitingnore
+
 ## 0.0.1
 
 - Initial version
