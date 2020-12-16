@@ -1,6 +1,6 @@
 name: flutter_profile_list
 description: A new flutter plugin project.
-version: 0.0.2
+version: 0.0.2+1
 homepage: https://github.com/bynicodevelop/flutter_profile_list
 
 environment:
@@ -11,7 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_profile_avatar: ^0.0.1
+  flutter_profile_avatar: ^0.0.2+1
+  flutter_models: ^0.0.1
 
 dev_dependencies:
   flutter_test:

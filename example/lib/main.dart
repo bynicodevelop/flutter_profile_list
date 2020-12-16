@@ -2,7 +2,8 @@ import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_profile_list/flutter_profile_list.dart';
-import 'package:flutter_profile_list/models/Profile.dart';
+import 'package:flutter_models/models/UserModel.dart';
+import 'package:flutter_mobile_camera/CameraBuilder.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,18 +16,18 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final Faker _faker = Faker();
-  List<ItemProfileModel> _profiles = List<ItemProfileModel>();
+  List<UserModel> _profiles = List<UserModel>();
 
   @override
   void initState() {
     super.initState();
 
-    // Creating a List of ItemProfileModel
+    // Creating a List of UserModel
     for (int i = 0; i < 30; i++) {
       int randInt = _faker.randomGenerator.integer(9);
 
       _profiles.add(
-        ItemProfileModel(
+        UserModel(
           uid: _faker.randomGenerator.string(10),
           username: _faker.person.name(),
           status: randInt % 3 != 0 ? _faker.lorem.sentences(2).join(' ') : '',
@@ -43,17 +44,19 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        // Call the Widget
-        body: ProfileList(
-          // Capture the on tap event to trigger an action such as a redirect
-          onTap: (ItemProfileModel profile) => print(profile.toJson()),
-          // Set the list of items (profiles)
-          profiles: _profiles,
+    return CameraBuilder(
+      child: MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Plugin example app'),
+          ),
+          // Call the Widget
+          body: ProfileList(
+            // Capture the on tap event to trigger an action such as a redirect
+            onTap: (UserModel profile) => print(profile.toJson()),
+            // Set the list of items (profiles)
+            profiles: _profiles,
+          ),
         ),
       ),
     );

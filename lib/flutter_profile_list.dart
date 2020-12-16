@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile_list/models/Profile.dart';
+import 'package:flutter_models/models/UserModel.dart';
 import 'package:flutter_profile_list/widgets/ProfileItem.dart';
 
 class ProfileList extends StatefulWidget {
-  final Function(ItemProfileModel) onTap;
-  final List<ItemProfileModel> profiles;
+  final Function(UserModel) onTap;
+  final List<UserModel> profiles;
 
   const ProfileList({
     Key key,

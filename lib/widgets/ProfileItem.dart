@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile_avatar/flutter_profile_avatar.dart';
-import 'package:flutter_profile_list/models/Profile.dart';
+import 'package:flutter_models/models/UserModel.dart';
 
 class ProfileItem extends StatelessWidget {
-  final Function(ItemProfileModel) onTap;
-  final ItemProfileModel profile;
+  final Function(UserModel) onTap;
+  final UserModel profile;
 
   const ProfileItem({
     Key key,
