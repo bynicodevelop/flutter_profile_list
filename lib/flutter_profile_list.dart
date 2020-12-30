@@ -20,22 +20,17 @@ class _ProfileListState extends State<ProfileList> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: const EdgeInsets.only(
+        top: 10.0,
+      ),
       itemCount: widget.profiles.length,
       itemBuilder: (context, index) {
-        return Padding(
-          padding: EdgeInsets.only(
-            top: index == 0 ? 10.0 : 0,
-          ),
-          child: Item(
-              onTap: (uid) => widget.onTap(widget.profiles[index]),
-              uid: widget.profiles[index].uid,
-              label: widget.profiles[index].username,
-              subLabel: widget.profiles[index].status,
-              avatarURL: widget.profiles[index].avatarURL),
-          // ProfileItem(
-          //   onTap: widget.onTap,
-          //   profile: widget.profiles[index],
-          // ),
+        return Item(
+          onTap: (uid) => widget.onTap(widget.profiles[index]),
+          uid: widget.profiles[index].uid,
+          label: widget.profiles[index].username,
+          subLabel: widget.profiles[index].status,
+          avatarURL: widget.profiles[index].avatarURL,
         );
       },
     );

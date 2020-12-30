@@ -1,3 +1,7 @@
+## 0.0.3+1
+
+- Optimized the padding top in the listview
+
 ## 0.0.3
 
 - Remplace the Profile Item by a new plugin [flutter_item_list](https://pub.dev/packages/flutter_item_list)
